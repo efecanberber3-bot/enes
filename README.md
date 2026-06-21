@@ -1,18 +1,20 @@
-# EnesDemirel Redesign
+# Enes Demirel Premium Site Taslağı
 
-Modern, responsive, tek sayfalık EnesDemirel web sitesi taslağı.
+Bu paket, enesdemirel.com için modern ve premium tek sayfalık yeniden tasarım taslağıdır.
 
 ## Dosyalar
-- `index.html`: Sayfa içeriği
-- `style.css`: Tasarım ve responsive yapı
-- `script.js`: Menü, animasyon ve mailto form işlevleri
 
-## Yayına alma
-1. Dosyaları GitHub Pages reposuna yükle.
-2. `index.html`, `style.css`, `script.js` aynı klasörde kalsın.
-3. Form şimdilik mailto ile çalışır. Gerçek form kaydı için Formspree, Netlify Forms veya özel backend bağlanabilir.
+- `index.html` — Ana sayfa
+- `style.css` — Tüm tasarım ve responsive yapı
+- `script.js` — Menü, animasyon, ilerleme çubuğu ve form davranışları
 
-## Düzenlenecek yerler
-- Instagram linki: `https://instagram.com/enesmirel`
-- E-posta: `info@enesdemirel.com`
-- Metinler ve istatistikler müşteriden gelecek net bilgiye göre güncellenebilir.
+## Yayına Alma
+
+1. Dosyaları GitHub reposuna yükle.
+2. GitHub Pages ayarından branch olarak `main` ve klasör olarak `/root` seç.
+3. Domain mevcutsa `CNAME` dosyasına `enesdemirel.com` yazılabilir.
+4. Form şu an `mailto:info@enesdemirel.com` ile çalışır. Gerçek başvuru sistemi istenirse Formspree, Netlify Forms veya özel backend bağlanabilir.
+
+## Müşteri Notu
+
+Tasarım, mevcut sitedeki “fikir, üretim, vizyon, topluluk” dilini koruyup daha premium bir dijital laboratuvar hissine taşır. Metinler teslim öncesi müşterinin kesin hizmetlerine ve iletişim adreslerine göre güncellenmelidir.

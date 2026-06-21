@@ -3,237 +3,281 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EnesDemirel - Fikirleri projeye, projeleri markaya dönüştüren üretim ve girişimcilik topluluğu." />
-  <meta name="theme-color" content="#070A12" />
-  <title>EnesDemirel | Birlikte Üretiyoruz</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Enes Demirel — fikirleri, üretimi ve vizyonu bir araya getiren yeni nesil dijital üretim alanı." />
+  <meta name="keywords" content="Enes Demirel, fikir, üretim, vizyon, dijital proje, sosyal girişimcilik, yaratıcı düşünce" />
+  <meta name="theme-color" content="#05060d" />
+  <meta property="og:title" content="Enes Demirel | Fikri Formun Ötesine Taşı" />
+  <meta property="og:description" content="Fikirlerin üretime, üretimin markaya dönüştüğü dijital laboratuvar." />
+  <meta property="og:type" content="website" />
+  <title>Enes Demirel | Fikri Formun Ötesine Taşı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="site-shell" aria-hidden="true">
+    <div class="grid-lines"></div>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="grain"></div>
+  </div>
 
-  <header class="site-header" id="top">
-    <a href="#top" class="brand" aria-label="EnesDemirel ana sayfa">
-      <span class="brand-mark">E</span>
-      <span class="brand-text">Enes<span>Demirel</span></span>
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <header class="header" id="top">
+    <a class="logo" href="#top" aria-label="Enes Demirel ana sayfa">
+      <span class="logo-mark">ED</span>
+      <span class="logo-text">Enes<span>Demirel</span></span>
     </a>
 
-    <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <button class="menu-toggle" type="button" aria-label="Menüyü aç veya kapat" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <nav class="site-nav" aria-label="Ana menü">
-      <a href="#neden">Neden?</a>
+    <nav class="nav" aria-label="Ana menü">
+      <a href="#lab">Laboratuvar</a>
+      <a href="#odak">Odak Alanları</a>
       <a href="#surec">Süreç</a>
       <a href="#vizyon">Vizyon</a>
-      <a href="#fikir-paylas">Fikrini Paylaş</a>
+      <a href="#fikir" class="nav-cta">Fikrini Paylaş</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero section-pad">
-      <div class="hero-bg" aria-hidden="true"></div>
+    <section class="hero section" id="home">
       <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <div class="eyebrow"><span></span> Fikirden projeye, projeden markaya</div>
-          <h1>Fikirlerin üretime dönüştüğü yeni nesil topluluk.</h1>
-          <p>
-            EnesDemirel; yaratıcı fikirleri, sosyal girişimleri ve teknoloji odaklı projeleri
-            birlikte büyütmek için kurulan modern bir üretim alanıdır.
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Birlikte Üretiyoruz</p>
+          <h1>Fikri formun ötesine taşı.</h1>
+          <p class="hero-lead">
+            Enes Demirel; fikirleri dinleyen, sadeleştiren ve üretilebilir projelere dönüştüren
+            yeni nesil bir dijital üretim alanı olarak konumlanır.
           </p>
           <div class="hero-actions">
-            <a href="#fikir-paylas" class="btn btn-primary">Fikrini Paylaş</a>
-            <a href="#surec" class="btn btn-ghost">Nasıl Çalışır?</a>
+            <a href="#fikir" class="btn btn-primary magnetic">Fikrini Paylaş</a>
+            <a href="#lab" class="btn btn-secondary magnetic">Konsepti İncele</a>
           </div>
-          <div class="hero-metrics" aria-label="Öne çıkan değerler">
-            <div><strong>3</strong><span>Aşamalı süreç</span></div>
-            <div><strong>∞</strong><span>Fikir potansiyeli</span></div>
-            <div><strong>1</strong><span>Ortak vizyon</span></div>
+          <div class="hero-tags" aria-label="Marka odakları">
+            <span>Fikir</span>
+            <span>Üretim</span>
+            <span>Vizyon</span>
+            <span>Topluluk</span>
           </div>
         </div>
 
-        <div class="hero-visual reveal delay-1" aria-label="Üretim konsepti görseli">
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
-          <div class="glass-card main-card">
-            <div class="card-topline">
-              <span class="live-dot"></span>
-              Birlikte Üretiyoruz
+        <div class="hero-visual reveal delay-1" aria-label="Dijital üretim konsept görseli">
+          <div class="visual-frame">
+            <div class="visual-top">
+              <span class="status-dot"></span>
+              <span>Live Lab / 2026</span>
             </div>
-            <h2>Fikrin burada şekillenir.</h2>
-            <p>Düşün, planla, üret ve doğru stratejiyle büyüt.</p>
-            <div class="progress-list">
-              <div><span>Düşün</span><em></em></div>
-              <div><span>Üret</span><em></em></div>
-              <div><span>Yüksel</span><em></em></div>
+            <div class="big-type">
+              <span>THINK</span>
+              <span>BUILD</span>
+              <span>RISE</span>
+            </div>
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+            <div class="metric-card metric-one">
+              <strong>01</strong>
+              <span>Fikir analizi</span>
+            </div>
+            <div class="metric-card metric-two">
+              <strong>02</strong>
+              <span>Üretim planı</span>
+            </div>
+            <div class="metric-card metric-three">
+              <strong>03</strong>
+              <span>Markaya dönüşüm</span>
             </div>
           </div>
-          <div class="floating-card card-a">⚡ Hızlı aksiyon</div>
-          <div class="floating-card card-b">🚀 Marka vizyonu</div>
-          <div class="floating-card card-c">🤝 İş birliği</div>
         </div>
       </div>
-      <a href="#neden" class="scroll-cue" aria-label="Aşağı kaydır">Aşağı Kaydır <span>↓</span></a>
+
+      <a href="#lab" class="scroll-link" aria-label="Aşağı kaydır">
+        <span>Aşağı Kaydır</span>
+        <i>↓</i>
+      </a>
     </section>
 
-    <section class="section-pad" id="neden">
-      <div class="container two-col">
-        <div class="section-intro reveal">
-          <span class="section-kicker">Neden EnesDemirel?</span>
-          <h2>Fikirleri sadece dinlemiyoruz, uygulanabilir projelere çeviriyoruz.</h2>
+    <section class="section compact" id="lab">
+      <div class="container intro-grid">
+        <div class="reveal">
+          <p class="section-kicker">Laboratuvar</p>
+          <h2>Fikirler burada daha net, daha uygulanabilir ve daha güçlü hale gelir.</h2>
         </div>
-        <p class="lead reveal delay-1">
-          Her büyük girişim küçük bir düşünceyle başlar. Doğru yönlendirme, üretim disiplini
-          ve güçlü bir vizyonla bu düşünce gerçek bir değere dönüşür.
+        <p class="section-lead reveal delay-1">
+          Mevcut marka dili “fikir, üretim ve vizyon” üzerine kurulu. Bu yeni yapı, aynı fikri
+          daha modern, daha güven veren ve daha profesyonel bir dijital deneyime dönüştürür.
         </p>
       </div>
 
-      <div class="container feature-grid">
-        <article class="feature-card reveal">
-          <span class="icon">💡</span>
+      <div class="container lab-grid">
+        <article class="lab-card reveal">
+          <span class="card-index">01</span>
           <h3>Düşün</h3>
-          <p>Fikrini netleştirir, hedef kitleni ve projenin değer önerisini birlikte belirleriz.</p>
+          <p>Fikir ilk haliyle alınır; amaç, hedef kitle, problem ve potansiyel değer netleştirilir.</p>
         </article>
-        <article class="feature-card reveal delay-1">
-          <span class="icon">⚙️</span>
+        <article class="lab-card reveal delay-1">
+          <span class="card-index">02</span>
           <h3>Üret</h3>
-          <p>Planı aksiyona çevirir, tasarım, teknoloji ve içerik adımlarını sistemli ilerletiriz.</p>
+          <p>Fikir; tasarım, içerik, teknoloji ve yol haritası ile gerçek bir projeye çevrilir.</p>
         </article>
-        <article class="feature-card reveal delay-2">
-          <span class="icon">🚀</span>
+        <article class="lab-card reveal delay-2">
+          <span class="card-index">03</span>
           <h3>Yüksel</h3>
-          <p>Projenin görünürlüğünü artırır, onu sürdürülebilir bir marka haline getiririz.</p>
+          <p>Proje yayın sonrası büyüme, topluluk ve marka algısı odağında geliştirilmeye devam eder.</p>
         </article>
       </div>
     </section>
 
-    <section class="section-pad split-section" id="surec">
-      <div class="container process-grid">
-        <div class="sticky-copy reveal">
-          <span class="section-kicker">Çalışma Süreci</span>
-          <h2>Dağınık fikirlerden net bir yol haritasına.</h2>
+    <section class="section" id="odak">
+      <div class="container section-head reveal">
+        <p class="section-kicker">Odak Alanları</p>
+        <h2>Dijital dünyada fikirden markaya giden yolu sadeleştirir.</h2>
+      </div>
+
+      <div class="container focus-grid">
+        <article class="focus-card reveal">
+          <div class="focus-icon">✦</div>
+          <h3>Fikir Geliştirme</h3>
+          <p>Dağınık fikirleri uygulanabilir proje başlıklarına ve net bir anlatıya dönüştürür.</p>
+        </article>
+        <article class="focus-card reveal delay-1">
+          <div class="focus-icon">⌁</div>
+          <h3>Marka Hikâyesi</h3>
+          <p>Projenin kimliğini, mesajını ve hedef kitlesiyle kuracağı bağı güçlendirir.</p>
+        </article>
+        <article class="focus-card reveal delay-2">
+          <div class="focus-icon">◈</div>
+          <h3>Dijital Görünürlük</h3>
+          <p>Sitenin, sosyal medya hesaplarının ve dijital temas noktalarının daha profesyonel görünmesini sağlar.</p>
+        </article>
+        <article class="focus-card reveal">
+          <div class="focus-icon">⬡</div>
+          <h3>Topluluk Vizyonu</h3>
+          <p>Tek kişinin fikrini, katılımcı ve paylaşılabilir bir üretim kültürüne taşır.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section process-section" id="surec">
+      <div class="container process-layout">
+        <div class="process-copy reveal">
+          <p class="section-kicker">Süreç</p>
+          <h2>Başvuru geldiğinde ne olur?</h2>
           <p>
-            Başvuru sonrası fikir analiz edilir, uygun adımlar belirlenir ve üretim süreci
-            şeffaf şekilde başlatılır.
+            Site sadece güzel görünmek için değil, fikir toplamak ve doğru kişileri aksiyona çağırmak için tasarlandı.
+            Bu yüzden form, yönlendirme ve anlatım akışı özellikle güçlü tutuldu.
           </p>
-          <a href="#fikir-paylas" class="text-link">Süreci başlat →</a>
         </div>
         <div class="timeline">
-          <div class="timeline-item reveal">
+          <div class="timeline-row reveal">
             <span>01</span>
-            <h3>Fikir Analizi</h3>
-            <p>Fikrin amacı, hedef kitlesi, güçlü yönleri ve geliştirme alanları çıkarılır.</p>
+            <div>
+              <h3>Fikir alınır</h3>
+              <p>Kullanıcı fikrini, iletişim bilgisini ve ihtiyacını sade bir formla iletir.</p>
+            </div>
           </div>
-          <div class="timeline-item reveal">
+          <div class="timeline-row reveal delay-1">
             <span>02</span>
-            <h3>Strateji & Planlama</h3>
-            <p>Projenin teknik, görsel ve iletişim planı sade bir yol haritasına dönüştürülür.</p>
+            <div>
+              <h3>Potansiyel çıkarılır</h3>
+              <p>Fikrin uygulanabilirliği, hedef kitlesi ve ilk aksiyon adımları belirlenir.</p>
+            </div>
           </div>
-          <div class="timeline-item reveal">
+          <div class="timeline-row reveal delay-2">
             <span>03</span>
-            <h3>Üretim</h3>
-            <p>Tasarım, içerik ve uygulama aşaması kontrollü şekilde ilerletilir.</p>
+            <div>
+              <h3>Yol haritası kurulur</h3>
+              <p>Fikir; tasarım, yazılım, içerik veya sosyal proje başlıklarına ayrılır.</p>
+            </div>
           </div>
-          <div class="timeline-item reveal">
+          <div class="timeline-row reveal">
             <span>04</span>
-            <h3>Yayına Alma</h3>
-            <p>Proje yayınlanır, geri bildirimler alınır ve büyüme için yeni adımlar planlanır.</p>
+            <div>
+              <h3>Üretime geçilir</h3>
+              <p>Onaylanan fikir, dijital dünyada görünür bir projeye dönüşür.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-pad" id="vizyon">
-      <div class="container vision-card reveal">
+    <section class="section" id="vizyon">
+      <div class="container manifesto reveal">
         <div>
-          <span class="section-kicker">Vizyonumuz</span>
-          <h2>İnsanları, fikirleri ve üretim kültürünü büyütmek.</h2>
+          <p class="section-kicker">Vizyon</p>
+          <h2>Fikir paylaşımını herkes için daha erişilebilir hale getirmek.</h2>
         </div>
         <p>
-          Yarınların dünyasında sadece fikir üretmek değil, bu fikirleri paylaşabilen,
-          geliştirebilen ve topluma değer katabilen bir topluluk kurmak istiyoruz.
+          Enes Demirel markası; sosyal girişimcilik, teknoloji odaklılık ve yaratıcı düşünceyi
+          aynı çatı altında toplayan bir üretim vizyonu sunar. Yeni tasarım bu vizyonu daha güçlü,
+          daha premium ve daha güvenilir gösterir.
         </p>
       </div>
 
-      <div class="container values-grid">
-        <article class="value reveal">
-          <h3>Sosyal Girişimcilik</h3>
-          <p>Topluma katkı sağlayan ve sürdürülebilir fikirlerin yanında durur.</p>
-        </article>
-        <article class="value reveal delay-1">
-          <h3>Teknoloji Odaklılık</h3>
-          <p>Yeni teknolojilerle fikirleri daha ölçülebilir ve ölçeklenebilir hale getirir.</p>
-        </article>
-        <article class="value reveal delay-2">
-          <h3>Yaratıcı Düşünce</h3>
-          <p>Alışılmışın dışındaki bakış açılarını güçlü projelere dönüştürür.</p>
-        </article>
+      <div class="container quote-card reveal delay-1">
+        <p>“Yüzlerce fikir, onlarca proje, tek bir vizyon: üretmek, paylaşmak ve gelişmek.”</p>
       </div>
     </section>
 
-    <section class="cta-strip section-pad-sm">
-      <div class="container cta-inner reveal">
-        <h2>Bir fikrin varsa, onu bekletme.</h2>
-        <p>Bugün paylaş, birlikte geliştirelim ve güçlü bir başlangıca dönüştürelim.</p>
-        <a href="#fikir-paylas" class="btn btn-light">Topluluğa Katıl</a>
-      </div>
-    </section>
-
-    <section class="section-pad" id="fikir-paylas">
-      <div class="container form-grid">
-        <div class="form-copy reveal">
-          <span class="section-kicker">Fikrini Paylaş</span>
-          <h2>Hayalini anlat, birlikte büyütelim.</h2>
+    <section class="section idea-section" id="fikir">
+      <div class="container idea-layout">
+        <div class="idea-copy reveal">
+          <p class="section-kicker">Fikrini Paylaş</p>
+          <h2>Bir fikrin varsa, onu bekletme.</h2>
           <p>
-            Formu doldurduğunda bilgiler e-posta taslağı olarak hazırlanır. İstersen bu yapı
-            daha sonra gerçek backend veya Formspree/Netlify Forms ile bağlanabilir.
+            Form şu an e-posta taslağı oluşturacak şekilde ayarlandı. İstenirse daha sonra gerçek
+            form altyapısına bağlanabilir ve başvurular direkt panele düşürülebilir.
           </p>
-          <div class="contact-mini">
-            <a href="https://instagram.com/enesmirel" target="_blank" rel="noopener">Instagram: @enesmirel</a>
-            <button type="button" id="copyMail" data-mail="info@enesdemirel.com">E-postayı kopyala</button>
+          <div class="contact-pills">
+            <a href="https://instagram.com/enesmirel" target="_blank" rel="noopener">Instagram / @enesmirel</a>
+            <button type="button" id="copyEmail" data-email="info@enesdemirel.com">info@enesdemirel.com</button>
           </div>
         </div>
 
         <form class="idea-form reveal delay-1" id="ideaForm">
           <label>
-            Ad Soyad
-            <input type="text" name="name" placeholder="Adını yaz" required />
+            <span>Ad Soyad</span>
+            <input type="text" name="name" placeholder="Adını yaz" autocomplete="name" required />
           </label>
           <label>
-            E-posta / Telefon
-            <input type="text" name="contact" placeholder="Sana nasıl ulaşalım?" required />
+            <span>İletişim</span>
+            <input type="text" name="contact" placeholder="E-posta veya telefon" autocomplete="email" required />
           </label>
           <label>
-            Fikir Kategorisi
+            <span>Fikir Türü</span>
             <select name="category" required>
               <option value="">Seçim yap</option>
-              <option>Teknoloji Projesi</option>
-              <option>Sosyal Girişim</option>
-              <option>İçerik / Marka</option>
+              <option>Uygulama / Yazılım Fikri</option>
+              <option>Sosyal Proje</option>
+              <option>İçerik / Marka Fikri</option>
+              <option>Topluluk / Etkinlik</option>
               <option>Diğer</option>
             </select>
           </label>
           <label>
-            Fikrini kısaca anlat
-            <textarea name="message" rows="5" placeholder="Fikrini, hedefini ve neye ihtiyacın olduğunu yaz" required></textarea>
+            <span>Fikrini anlat</span>
+            <textarea name="message" rows="5" placeholder="Fikrin ne, kime hitap ediyor, nerede desteğe ihtiyacın var?" required></textarea>
           </label>
           <button class="btn btn-primary" type="submit">Gönder</button>
-          <p class="form-note" id="formNote">Bilgilerin mail uygulamana aktarılır.</p>
+          <p class="form-status" id="formStatus">Gönder butonu mail taslağı açar.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="container footer-inner">
-      <a href="#top" class="brand small">
-        <span class="brand-mark">E</span>
-        <span class="brand-text">Enes<span>Demirel</span></span>
+      <a class="logo footer-logo" href="#top" aria-label="Enes Demirel ana sayfa">
+        <span class="logo-mark">ED</span>
+        <span class="logo-text">Enes<span>Demirel</span></span>
       </a>
-      <p>© 2026 EnesDemirel — Birlikte Üretiyoruz ⚡</p>
+      <p>© 2026 Enes Demirel — Birlikte Üretiyoruz.</p>
       <a href="https://instagram.com/enesmirel" target="_blank" rel="noopener">@enesmirel</a>
     </div>
   </footer>

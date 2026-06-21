@@ -1,28 +1,37 @@
-const navToggle = document.querySelector('.nav-toggle');
-const siteNav = document.querySelector('.site-nav');
-const cursorGlow = document.querySelector('.cursor-glow');
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav');
+const progressBar = document.querySelector('#progressBar');
 const reveals = document.querySelectorAll('.reveal');
 const ideaForm = document.querySelector('#ideaForm');
-const formNote = document.querySelector('#formNote');
-const copyMail = document.querySelector('#copyMail');
+const formStatus = document.querySelector('#formStatus');
+const copyEmail = document.querySelector('#copyEmail');
+const magneticButtons = document.querySelectorAll('.magnetic');
 
-navToggle?.addEventListener('click', () => {
-  const isOpen = siteNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
+menuToggle?.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menuToggle.classList.toggle('active', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('menu-open', isOpen);
 });
 
-siteNav?.querySelectorAll('a').forEach((link) => {
+nav?.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    siteNav.classList.remove('open');
-    navToggle?.setAttribute('aria-expanded', 'false');
+    nav.classList.remove('open');
+    menuToggle?.classList.remove('active');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
   });
 });
 
-window.addEventListener('pointermove', (event) => {
-  if (!cursorGlow) return;
-  cursorGlow.style.left = `${event.clientX}px`;
-  cursorGlow.style.top = `${event.clientY}px`;
-});
+const updateProgress = () => {
+  if (!progressBar) return;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = total > 0 ? (window.scrollY / total) * 100 : 0;
+  progressBar.style.width = `${progress}%`;
+};
+window.addEventListener('scroll', updateProgress, { passive: true });
+window.addEventListener('resize', updateProgress);
+updateProgress();
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -32,30 +41,43 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.14 });
-
 reveals.forEach((element) => observer.observe(element));
+
+magneticButtons.forEach((button) => {
+  button.addEventListener('mousemove', (event) => {
+    const rect = button.getBoundingClientRect();
+    const x = event.clientX - rect.left - rect.width / 2;
+    const y = event.clientY - rect.top - rect.height / 2;
+    button.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
+  });
+  button.addEventListener('mouseleave', () => {
+    button.style.transform = '';
+  });
+});
 
 ideaForm?.addEventListener('submit', (event) => {
   event.preventDefault();
   const data = new FormData(ideaForm);
-  const subject = encodeURIComponent('Yeni Fikir Başvurusu - EnesDemirel');
+  const subject = encodeURIComponent('Yeni Fikir Başvurusu - Enes Demirel');
   const body = encodeURIComponent(
-    `Ad Soyad: ${data.get('name')}\n` +
-    `İletişim: ${data.get('contact')}\n` +
-    `Kategori: ${data.get('category')}\n\n` +
-    `Fikir:\n${data.get('message')}`
+    `Ad Soyad: ${data.get('name') || ''}\n` +
+    `İletişim: ${data.get('contact') || ''}\n` +
+    `Fikir Türü: ${data.get('category') || ''}\n\n` +
+    `Fikir:\n${data.get('message') || ''}`
   );
-  formNote.textContent = 'Mail taslağı hazırlanıyor...';
+  formStatus.textContent = 'Mail taslağı hazırlanıyor...';
   window.location.href = `mailto:info@enesdemirel.com?subject=${subject}&body=${body}`;
 });
 
-copyMail?.addEventListener('click', async () => {
-  const mail = copyMail.dataset.mail;
+copyEmail?.addEventListener('click', async () => {
+  const email = copyEmail.dataset.email;
   try {
-    await navigator.clipboard.writeText(mail);
-    copyMail.textContent = 'Kopyalandı ✓';
-    setTimeout(() => copyMail.textContent = 'E-postayı kopyala', 1800);
-  } catch {
-    copyMail.textContent = mail;
+    await navigator.clipboard.writeText(email);
+    copyEmail.textContent = 'Kopyalandı ✓';
+    setTimeout(() => {
+      copyEmail.textContent = email;
+    }, 1600);
+  } catch (error) {
+    copyEmail.textContent = email;
   }
 });
