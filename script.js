@@ -6,6 +6,8 @@ const ideaForm = document.querySelector('#ideaForm');
 const formStatus = document.querySelector('#formStatus');
 const copyEmail = document.querySelector('#copyEmail');
 const magneticButtons = document.querySelectorAll('.magnetic');
+const blogSearch = document.querySelector('#blogSearch');
+const postCards = document.querySelectorAll('[data-post-card]');
 
 menuToggle?.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
@@ -33,15 +35,19 @@ window.addEventListener('scroll', updateProgress, { passive: true });
 window.addEventListener('resize', updateProgress);
 updateProgress();
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.14 });
-reveals.forEach((element) => observer.observe(element));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  reveals.forEach((element) => observer.observe(element));
+} else {
+  reveals.forEach((element) => element.classList.add('show'));
+}
 
 magneticButtons.forEach((button) => {
   button.addEventListener('mousemove', (event) => {
@@ -50,9 +56,7 @@ magneticButtons.forEach((button) => {
     const y = event.clientY - rect.top - rect.height / 2;
     button.style.transform = `translate(${x * 0.08}px, ${y * 0.12}px)`;
   });
-  button.addEventListener('mouseleave', () => {
-    button.style.transform = '';
-  });
+  button.addEventListener('mouseleave', () => { button.style.transform = ''; });
 });
 
 ideaForm?.addEventListener('submit', (event) => {
@@ -74,10 +78,22 @@ copyEmail?.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(email);
     copyEmail.textContent = 'Kopyalandı ✓';
-    setTimeout(() => {
-      copyEmail.textContent = email;
-    }, 1600);
-  } catch (error) {
-    copyEmail.textContent = email;
-  }
+    setTimeout(() => { copyEmail.textContent = email; }, 1600);
+  } catch (error) { copyEmail.textContent = email; }
 });
+
+const applyBlogSearch = () => {
+  if (!blogSearch) return;
+  const query = blogSearch.value.toLocaleLowerCase('tr-TR').trim();
+  postCards.forEach((card) => {
+    const haystack = card.textContent.toLocaleLowerCase('tr-TR');
+    card.style.display = haystack.includes(query) ? '' : 'none';
+  });
+};
+blogSearch?.addEventListener('input', applyBlogSearch);
+
+const params = new URLSearchParams(window.location.search);
+if (blogSearch && params.get('q')) {
+  blogSearch.value = params.get('q');
+  applyBlogSearch();
+}

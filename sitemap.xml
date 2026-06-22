@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://enesdemirel.com/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://enesdemirel.com/blog/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://enesdemirel.com/blog/enes-demirel-kimdir.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://enesdemirel.com/blog/fikirden-dijital-projeye.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://enesdemirel.com/blog/dijital-gorunurluk-nedir.html</loc>
+    <lastmod>2026-06-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>
