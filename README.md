@@ -59,3 +59,18 @@ enesdemirel-blog-seo/
 ## Not
 
 Bu sistem statik blog sistemidir. Admin panelden yazı ekleme istenirse WordPress, Strapi, Sanity, Firebase veya özel PHP/MySQL panel yapılabilir.
+
+
+## Blog Not Found Düzeltmesi
+
+Bu sürümde blog linkleri göreceli yola çevrildi. Ana sayfadaki Blog butonu `blog/index.html` dosyasına gider. Ayrıca bazı hostinglerde kolay erişim için `blog.html` yönlendirme dosyası ve GitHub Pages için `CNAME` dosyası eklendi.
+
+Yüklerken klasörün kendisini değil, içindeki dosyaları repo/hosting kök dizinine atın:
+
+- index.html
+- style.css
+- script.js
+- blog/ klasörü
+- robots.txt
+- sitemap.xml
+- CNAME
